@@ -1,0 +1,7 @@
+nano data.txt
+cat data.txt
+hdfs dfs -mkdir /test
+hdfs dfs -put /home/codegyani/data.txt /test
+hadoop jar /home/codegyani/wordcountdemo.jar com.javatpoint.WC_Runner /test/data.txt /r_output
+hdfs dfs -cat /r_output/part-00000
+
